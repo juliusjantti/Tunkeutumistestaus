@@ -39,3 +39,5 @@ Kohdassa *Info* näkyy lisätietoa paketista.
   - Wireshark, https://www.wireshark.org/
   - Markdown Cheat Sheet, https://www.markdownguide.org/cheat-sheet/
   - Varonis, How to use wireshark: Comprehensive tutorial, https://www.varonis.com/blog/how-to-use-wireshark#packets
+  - Tero Karvinen, Tunkeutumistestaus kurssi, https://terokarvinen.com/tunkeutumistestaus/
+  - Tero Karvinen, Create a web bage using Github, https://terokarvinen.com/2023/create-a-web-page-using-github/
