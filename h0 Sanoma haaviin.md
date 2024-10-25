@@ -15,11 +15,17 @@ Nopealla googlailulla löytyi sivu [kaspersky](https://support.kaspersky.com/com
 **Analysoidaan yhtä TCP pakettia (kuvassa ruskealla maalattu paketti)**
 
 Kohdassa *N0.* lukee missä järjestyksessä paketti on otettu kiinni. Tämä paketti on 44. paketti. 
+
 Kohdassa *Time* näkyy kuinka kauan pakettien kaappaamisen aloittamisesta on kulunut kuin tämä paketti kaapattiin.
+
 Kohdassa *Source* näkyy lähde IP-osoite. Tässä kuvassa se on 10.213.107.23.
+
 Kohdassa *Destination* näkyy kohde IP-osoite. Tässä kuvassa se on 34.203.175.187.
+
 Kohdassa *Protocol* näkyy paketin tyyppi. Tässä vaiheessa se on TCP.
+
 Kohdassa *Length* näkyy paketin pituus. Tässä vaiheessa se on 66 tavua.
+
 Kohdassa *Info* näkyy lisätietoa paketista.
 
 
