@@ -10,10 +10,26 @@ Nopealla googlailulla löytyi sivu [kaspersky](https://support.kaspersky.com/com
 
 
 
-![kaapattu liikenne](<img width="1386" alt="Näyttökuva 2024-10-25 kello 10 10 03" src="https://github.com/user-attachments/assets/7060672b-733c-4a66-ac28-9e41a497ce20">)
+![Kaapattu liikenne](https://github.com/user-attachments/assets/1b80df87-bfb5-47ac-b03f-d40f1bccd7c7)
+
+**Analysoidaan yhtä TCP pakettia (kuvassa ruskealla maalattu paketti)**
+
+Kohdassa *N0.* lukee missä järjestyksessä paketti on otettu kiinni. Tämä paketti on 44. paketti. 
+Kohdassa *Time* näkyy kuinka kauan pakettien kaappaamisen aloittamisesta on kulunut kuin tämä paketti kaapattiin.
+Kohdassa *Source* näkyy lähde IP-osoite. Tässä kuvassa se on 10.213.107.23.
+Kohdassa *Destination* näkyy kohde IP-osoite. Tässä kuvassa se on 34.203.175.187.
+Kohdassa *Protocol* näkyy paketin tyyppi. Tässä vaiheessa se on TCP.
+Kohdassa *Length* näkyy paketin pituus. Tässä vaiheessa se on 66 tavua.
+Kohdassa *Info* näkyy lisätietoa paketista.
+
+
+
+
+
 
 
 
   # Lähteet
   - Wireshark, https://www.wireshark.org/
-  - Markdown Cheat Sheet https://www.markdownguide.org/cheat-sheet/
+  - Markdown Cheat Sheet, https://www.markdownguide.org/cheat-sheet/
+  - Varonis, How to use wireshark: Comprehensive tutorial, https://www.varonis.com/blog/how-to-use-wireshark#packets
