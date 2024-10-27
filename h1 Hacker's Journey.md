@@ -42,8 +42,43 @@ x)
 - Oikeudessa käsitelty tapaus jossa 17-vuotias tekijä oli porttiskannannut ja yrittänyt tunkeutua Osuuspankkikeskus-OPK osuuskunnan tietojärjestelmiin. Tekijä tuomittiin syylliseksi ja hänet määrättiin korvaamaan sattuneet vahingot yhteensä noin 75 000 markkaa.
 
 a) 
+Asennetaan Kali virtuaalikoneeseen. Aloitetaan lataamalla valmiiksi rakennettu Virtuaalikone sivulta [Per-Built Virtual Mchines](https://www.kali.org/get-kali/#kali-virtual-machines). Sekä seurataan [GeeksforGeeks:n](https://www.geeksforgeeks.org/install-kali-linux-in-virtualbox/) sivuilta ohjeita.
+Alla vielä kuva asennetusta virtuaalikoneesta. 
+
+![valmis kone](https://github.com/user-attachments/assets/6802edbe-fc04-4a56-a1d6-1b88b4826ce0)
+
+Virtuaalikone on toistaiseksi yhteydessä verkkoon.
+
+![google](https://github.com/user-attachments/assets/ba6a01e8-f2e5-46f2-a24c-bf0003536576)
+
+b) 
+
+Otetaan se irti verkosta vetämällä virtuaalisesti verkkokaapli irti koneesta. Mennään kohtaan settings > network > advanced > ja täppä pois kohdasta "Cable Connected".
+
+![töpseli irti](https://github.com/user-attachments/assets/a49830e8-0c94-40f0-bbc7-8a73529813fb)
+
+Kokeillaan vielä toimiiko netti.
+
+![google ei toimi](https://github.com/user-attachments/assets/54f61e2a-f7e1-4deb-8a5a-fea438a5c3cf)
+![ping](https://github.com/user-attachments/assets/2ac3d184-d716-4d01-8f6d-fb54c8e502a8)
+
+Kuvankaappauksista näkyy miten sekä selain että pingaus ei toimi.
 
 
- 
+
+
+
+
+
+
+
+
+
+## Lähteet
+
+- Kali, Pre-Built Virtual Machines, https://www.kali.org/get-kali/#kali-virtual-machines
+
+- Tero Karvinen, Tunkeutumistestaus, https://terokarvinen.com/tunkeutumistestaus/
+- Geeksforgeeks, How to Install Kali Linux in VirtualBox: Using Pre-built VM, https://www.geeksforgeeks.org/install-kali-linux-in-virtualbox/
 
 
