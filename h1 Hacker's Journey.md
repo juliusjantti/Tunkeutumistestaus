@@ -93,7 +93,25 @@ Skannasin 100 ensimmäistä porttia, ja kappas skannauksen jälkeen löytyikin k
 e) 
 f) 
 
-Asennetaan Metasploitable 2 virtuaalikone [sivustolta](https://sourceforge.net/projects/metasploitable/). Seurataan [Tuomas Valkamon ohjeita](https://tuomasvalkamo.com/PenTestCourse/week-2/) metasploitablen asentamiseen ja verkon luomiseen tietokoneiden välille. 
+Asennetaan Metasploitable 2 virtuaalikone [sivustolta](https://sourceforge.net/projects/metasploitable/). Seurataan [Tuomas Valkamon ohjeita](https://tuomasvalkamo.com/PenTestCourse/week-2/) metasploitablen asentamiseen ja verkon luomiseen tietokoneiden välille. Metasploitablen lataukseen meni jostain syystä noin tunti. 
+
+Pienen pyristelyn jälkeen metasploitable on asennettu. 
+![](https://github.com/user-attachments/assets/ed75339b-84be-4119-ac8c-aff95c55a8c5)
+Käynnistetään se ja kirjaudutaan sisään käyttäjällä msfadmin
+![](https://github.com/user-attachments/assets/5acbf0d5-1122-49df-8ee2-65f547c43665)
+Sisään päästy! Testataan vielä että tietokone ei ole yhteydessä internettiin pingaamalla 8.8.8.8 tai google.com. Niihin ei saada yhteyttä. Varmistetaan sitten myös ettei hyökkäävällä Kali koneellakaan pääse internettiin.
+
+Yritetään ottaa Kalilla yhteys Metasploitable koneeseen:
+![toimii](https://github.com/user-attachments/assets/aac4012f-28a5-44a6-ac33-6cefb72fd092)
+Ja kas näin molemmat tietokoneet näyttävät olevan samassa verkossa.
+
+g) 
+
+
+
+
+
+
 
 
 
@@ -115,6 +133,8 @@ Asennetaan Metasploitable 2 virtuaalikone [sivustolta](https://sourceforge.net/p
 - Tero Karvinen, Tunkeutumistestaus, https://terokarvinen.com/tunkeutumistestaus/
 - Geeksforgeeks, How to Install Kali Linux in VirtualBox: Using Pre-built VM, https://www.geeksforgeeks.org/install-kali-linux-in-virtualbox/
 - Tony Teaches Tech, How to use nmap to scan for open ports, https://www.youtube.com/watch?v=ifbwTt3_oCg
+- Tuomas Valkamo, Hacking into a target using metasploit, https://tuomasvalkamo.com/PenTestCourse/week-2/
+- Sourceforge, Metasploitable 2 download, https://sourceforge.net/projects/metasploitable/
 - 
 
 
