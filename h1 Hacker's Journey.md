@@ -93,7 +93,7 @@ Skannasin 100 ensimmäistä porttia, ja kappas skannauksen jälkeen löytyikin k
 e) 
 f) 
 
-Asennetaan Metasploitable 2 virtuaalikone [sivustolta](https://sourceforge.net/projects/metasploitable/). Seurataan [Tuomas Valkamon ohjeita](https://tuomasvalkamo.com/PenTestCourse/week-2/) metasploitablen asentamiseen ja verkon luomiseen tietokoneiden välille. Metasploitablen lataukseen meni jostain syystä noin tunti. 
+Asennetaan Metasploitable 2 virtuaalikone [sivustolta](https://sourceforge.net/projects/metasploitable/). Seurataan [Tuomas Valkamon ohjeita](https://tuomasvalkamo.com/PenTestCourse/week-2/) metasploitablen asentamiseen ja verkon luomiseen tietokoneiden välille. Metasploitablen lataukseen meni jostain syystä noin tunti. Metasploitablen latauskansiossa oli VMDK-tiedosto jota ei voinut suoraan importata VirtualBoxiin. VirtualBoxissa piti luoda uusi virtuaalikone ja valita sieltä tarvittavat asetukset. Ja lopuksi liittää kovalevyksi ladattu VMDK tiedosto. Tuomas Valkamon ohjeissa ei ollut tätä kohtaa. Vinkkejä löytyi [tästä](https://www.youtube.com/watch?v=8ezWLmZr8A4) videosta.
 
 Pienen pyristelyn jälkeen metasploitable on asennettu. 
 ![](https://github.com/user-attachments/assets/ed75339b-84be-4119-ac8c-aff95c55a8c5)
