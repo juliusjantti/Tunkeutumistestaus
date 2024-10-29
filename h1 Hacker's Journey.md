@@ -107,25 +107,20 @@ Ja kas näin molemmat tietokoneet näyttävät olevan samassa verkossa.
 
 g) 
 
+![löytyy](https://github.com/user-attachments/assets/ea2f73e1-6cb3-424b-8d9d-af5d588cc2fd)
+![nmap sn](https://github.com/user-attachments/assets/28ec1380-5ce6-4c8a-bd41-c7971de463f5)
+Metasploitable löytyy. 
 
+h)
 
+Komennolla `nmap -p0-65535 <ip-osoite>` havaitaan miten erittäin suuri määrä portteja on auki. (Komento otettu [rapid7](https://docs.rapid7.com/metasploit/metasploitable-2-exploitability-guide/)n sivuilta.)
+![portit](https://github.com/user-attachments/assets/dfb9e056-4d2f-4aeb-9c43-9a9f451c45cd)
 
+Samalta [rapid7](https://docs.rapid7.com/metasploit/metasploitable-2-exploitability-guide/) sivulta löytyy tietoa mitä portteja voi hyödyntää tunkeutumiseen.
 
+Esim portit 512, 513, 514 on konfiguroitu väärin siten että niiden kautta voi saada etäyhteyden metaslpoitable koneeseen. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Myös porttia 2049 voidaan hyödyntää. Jossa käytetään hyväksi NSF:ää (Network File System). Siinä luodaan oma ssh avain ja liitetään se hyväksyttävien avaimien joukkoon root käyttäjälle. Jos nyt ymmärsin oikein?.
 
 ## Lähteet
 
@@ -135,6 +130,6 @@ g)
 - Tony Teaches Tech, How to use nmap to scan for open ports, https://www.youtube.com/watch?v=ifbwTt3_oCg
 - Tuomas Valkamo, Hacking into a target using metasploit, https://tuomasvalkamo.com/PenTestCourse/week-2/
 - Sourceforge, Metasploitable 2 download, https://sourceforge.net/projects/metasploitable/
-- 
+- Rapid7, Metasploitable 2 exploitability guide, https://docs.rapid7.com/metasploit/metasploitable-2-exploitability-guide/
 
 
