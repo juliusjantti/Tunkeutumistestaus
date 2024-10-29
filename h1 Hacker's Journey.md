@@ -35,6 +35,22 @@ h) Porttiskannaa Metasploitable huolellisesti ja kaikki portit (nmap -A -p-). Po
 
 x)
 
+- Kuuntelin Herrasmieshakkereiden jakson 34, Tietoturvan Niksipirkka. Ohessa muistiinpanoja jaksosta.
+    - Onko rikollinen tausta este vai meriitti it alalla? Sinänsä ei mutta luottamuksen rakentaminen voi olla vaikeaa. 
+
+      Korona aikana nettikaupoittelu kasvanut paljon esimerkiksi Wolt. Tämä vaatii paljon uutta digiosaamista ja kehitystä. 
+
+      Keskolla vain yksi tietoturvatiimi, joka sijaitsee pääkaupunkiseudulla. Toimii yhteistyössä muiden IT tiimien kanssa. 
+
+      Kesko kerää kulutustietoa asiakkaista, mutta vain heiltä jotka ovat antaneet luvan. Tietoa käytetään tarjouksien räätälöimiseen ostotottumusten perusteella. 
+
+      Kruoka äpissä ominaisuus jolla voi seurata omaa ruokakulutusta. Syökö vastuullisesti, tai liikaa suolaa/sokeria/lihaa. 
+
+      EUn direktiivit aiheuttavat Keskon konsernille enenevissä määrin jatkuvasti töitä. 
+
+      K-plussa kortin saaminen Apple pay lompakkoon on työn alla, mutta ei ihan lähellä vielä. 
+
+
 - LockHeed and Martinin kehittämä Cyber Kill Chain on turvallisuusmalli, joka kuvaa kyberhyökkäyksen vaiheet alusta loppuun. Sitä käytetään apuna hyökkäyksien tunnistamisessa sekä estämisessä. Kybertappoketju koostuu seitsemästä kohddasta jotka ovat: Reconnaissance, Weaponization, Delivery, Exploitation, Installation, Command and Control (C2), sekä Actions on Objectives.
   
 - Active reconnaissance eli aktiivinen tiedustelu on tiedustelu jossa lähetetään aktiivisesti informaatiota hyökkäyksen kohteelle. Yleensä aktiivisen tiedustelun vaiheet ovat jo yksinään lain vastaisia. Aktiivista tiedustelua on esimerkiksi porttien skannaus, sekä haavoittuvuuksien etsiminen. Porttiskannaukseen käytettyjä ohjelmia on esimerkiksi: Nmap, Masscan, sekä Udpprotoscanner. Verkkosovelluksia voi tutkia ohjellmalla nimeltä EyeWitness. Verkkohaavoittuvuuksien etsimiseen käytettäviä sovelluksia: Nessus, Nexpose, Nikto, Zed Attack Proxy. 
@@ -64,6 +80,25 @@ Kokeillaan vielä toimiiko netti.
 
 Kuvankaappauksista näkyy miten sekä selain että pingaus ei toimi.
 
+c) 
+
+Porttiskannataan komennolla `nmap -A localhost` 1000 yleisintä porttia. 
+![skannaus](https://github.com/user-attachments/assets/d45fcead-ccf6-4a26-8be1-719e9fdc720a)
+Niitä löytyi nolla kappaletta. Virtuaalikone ei ole kiinni internetissä joten portteja ei ole löydettäväksi. 
+
+Asennetaan muutama demoni ja ajetaan komento uudestaan. Tässä kohtaa asensin Apache2 HTTP palvelimen ja FTP palvelimen. 
+![kaksi](https://github.com/user-attachments/assets/4b8ba94b-aa16-41f2-8821-f0e6c748ae94)
+Skannasin 100 ensimmäistä porttia, ja kappas skannauksen jälkeen löytyikin kaksi avonaista. Portit auki FTP ja HTTP liikenteelle. 
+
+e) 
+f) 
+
+Asennetaan Metasploitable 2 virtuaalikone [sivustolta](https://sourceforge.net/projects/metasploitable/). Seurataan [Tuomas Valkamon ohjeita](https://tuomasvalkamo.com/PenTestCourse/week-2/) metasploitablen asentamiseen ja verkon luomiseen tietokoneiden välille. 
+
+
+
+
+
 
 
 
@@ -77,8 +112,9 @@ Kuvankaappauksista näkyy miten sekä selain että pingaus ei toimi.
 ## Lähteet
 
 - Kali, Pre-Built Virtual Machines, https://www.kali.org/get-kali/#kali-virtual-machines
-
 - Tero Karvinen, Tunkeutumistestaus, https://terokarvinen.com/tunkeutumistestaus/
 - Geeksforgeeks, How to Install Kali Linux in VirtualBox: Using Pre-built VM, https://www.geeksforgeeks.org/install-kali-linux-in-virtualbox/
+- Tony Teaches Tech, How to use nmap to scan for open ports, https://www.youtube.com/watch?v=ifbwTt3_oCg
+- 
 
 
