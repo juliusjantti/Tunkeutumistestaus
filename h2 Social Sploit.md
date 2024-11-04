@@ -1,6 +1,6 @@
 # h2 Tehtävät
 
-x) Lue/katso/kuuntele ja tiivistä. (Jaswal 2020: Mastering Metasploit - 4ed: Chapter 1: Approaching a Penetration Test Using Metasploit)[https://learning.oreilly.com/library/view/mastering-metasploit/9781838980078/B15076_01_Final_ASB_ePub.xhtml#_idParaDest-31]
+x) Lue/katso/kuuntele ja tiivistä. [Jaswal 2020: Mastering Metasploit - 4ed: Chapter 1: Approaching a Penetration Test Using Metasploit](https://learning.oreilly.com/library/view/mastering-metasploit/9781838980078/B15076_01_Final_ASB_ePub.xhtml#_idParaDest-31)
 
 a) Harjoittelemme omassa virtuaaliverkossa, jossa on Kali ja Metaspoitable. Osoita testein, että 1) koneet eivät saa yhteyttä Internetiin 2) Koneet saavat yhteyden toisiinsa. (Koneiden ja verkon asentamista ei tarvitse raportoida uudestaan, paitsi jos siinä on ongelmia)
 
@@ -77,6 +77,59 @@ f)
 
 Nmap tallentaa tiedot kolmeen omaan tiedostoon: .gnmap, .nmap ja .xml. "Nmap text format (.nmap)" on formaatti jota zenmap ei voi avata uudestaan. Jos haluaa avata tiedoston kannattaa tallettaa se -XML muotoon. Xml on myös hyvä formaatti jatkojalostukseen, jos sen osaa tehdä. Xml on myös helppo avata useammalla työkalulla. Metaslpoitin oma tietokanta on siisti ja yksinkertainen, ja se näkyy helposti yhdellä komennolla. 
 
+g) 
+
+Murtaudutaan vsftpd-palveluun. Etsitään ensiksi hyökkäys `search` komennolla. 
+![](https://github.com/user-attachments/assets/7fef609b-649f-441a-a60f-8501cf047acf)
+
+Sitten asetetaan kohteeksi maalikone komennolla `setg RHOSTS <ip osoite>`. Jonka jälkeen ajetaan komento `run` mikä ajaa hyökkäyksen. 
+
+![vsftpd](https://github.com/user-attachments/assets/04f3d2c2-852d-473f-9c33-a22c68c75393)
+
+Ja niin saatiin shell-yhteys maalikoneeseen. 
+
+h)
+
+ Asetetaan kyseinen sessio taka alalle komennolla `background`. Luodaan uusi sessio komennolla `sessions -u 1` ja liitytään siihen meterpreterillä komennolla `session 2`.
+ 
+![meterpreter](https://github.com/user-attachments/assets/e7b335f3-efb4-4dd3-a978-207e98cd0e52)
+
+i) 
+
+En ihan täysin tiennyt mitä tässä tehtävässä tehdä joten toistin tunnilla käydyt asiat kuten käyttäjien ja salasanojen etsiminen järjestelmästä. 
+
+![](https://github.com/user-attachments/assets/e9923b53-e036-485c-9e04-2dd8c6e98f3d)
+`cat /ect/passwd`
+![](https://github.com/user-attachments/assets/3125916a-d38e-4f0f-90fc-e261e53d9473)
+`cat /ect/shadow`
+
+j)
+
+Kokeillaan yhtä [Rapid7](https://docs.rapid7.com/metasploit/metasploitable-2-exploitability-guide/) sivulta löytyvää hyökkäystä.
+
+![](https://github.com/user-attachments/assets/c9526da3-9ac6-4ffd-ade2-58e1febf0f2a)
+
+Ei näyttänyt onnistuvan. 
+
+Valkamon ja Rapid7 ohjeita seuraamalla yritin UnrealIRCd:tä. 
+
+![](https://github.com/user-attachments/assets/c0447d44-b81c-47fd-b830-9305d3435e30)
+
+Ei onnistunut vieläkään. Tässä kohtaa muistin että tunnilla, demossa oli samanlainen ongelma. Mutta en muista enään miten ongelma korjattiin. 
+
+
+k)
+
+![](https://github.com/user-attachments/assets/0e6f19e0-e120-4d2a-a2f2-f065ebadaafe)
+Komentoja meterpreterillä 
+
+l) 
+
+Tallennettiin shell sessio tekstitiedostoon "log001.txt".
+
+![](https://github.com/user-attachments/assets/b2dcae1b-c35e-44e4-b8c8-2af36e1ef091)
+
+
 
 
 
@@ -86,6 +139,6 @@ Nmap tallentaa tiedot kolmeen omaan tiedostoon: .gnmap, .nmap ja .xml. "Nmap tex
 - Tero Karvinen, Tunkeutumistestaus, https://terokarvinen.com/tunkeutumistestaus/
 -  Jaswal 2020: Mastering Metasploit - 4ed: Chapter 1: Approaching a Penetration Test Using Metasploit https://learning.oreilly.com/library/view/mastering-metasploit/9781838980078/B15076_01_Final_ASB_ePub.xhtml#_idParaDest-31
 -  Nmap, sacing and loading scan results, https://nmap.org/book/zenmap-saving.html
--  
+-  Tuoma Valkamo, Hacking in to metasploitable, https://tuomasvalkamo.com/PenTestCourse/week-2/
 
 
