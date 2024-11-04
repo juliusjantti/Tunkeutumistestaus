@@ -67,7 +67,15 @@ Sitten porttiskannataan metaslpoitable ja tallennetaan tulokset tiedostoon "test
 
 ![testi](https://github.com/user-attachments/assets/09632094-6ede-42d9-9651-f69811f0c8a0)
 
+e)
 
+Tietokantoihin tallennetut tiedot komentojen `hosts`ja `services` jälkeen. 
+
+![tietokanta](https://github.com/user-attachments/assets/510f8cd9-46a0-4237-beae-5e8903e8b2d5)
+
+f) 
+
+Nmap tallentaa tiedot kolmeen omaan tiedostoon: .gnmap, .nmap ja .xml. "Nmap text format (.nmap)" on formaatti jota zenmap ei voi avata uudestaan. Jos haluaa avata tiedoston kannattaa tallettaa se -XML muotoon. Xml on myös hyvä formaatti jatkojalostukseen, jos sen osaa tehdä. Xml on myös helppo avata useammalla työkalulla. Metaslpoitin oma tietokanta on siisti ja yksinkertainen, ja se näkyy helposti yhdellä komennolla. 
 
 
 
@@ -77,5 +85,7 @@ Sitten porttiskannataan metaslpoitable ja tallennetaan tulokset tiedostoon "test
 # Lähteet
 - Tero Karvinen, Tunkeutumistestaus, https://terokarvinen.com/tunkeutumistestaus/
 -  Jaswal 2020: Mastering Metasploit - 4ed: Chapter 1: Approaching a Penetration Test Using Metasploit https://learning.oreilly.com/library/view/mastering-metasploit/9781838980078/B15076_01_Final_ASB_ePub.xhtml#_idParaDest-31
+-  Nmap, sacing and loading scan results, https://nmap.org/book/zenmap-saving.html
+-  
 
 
