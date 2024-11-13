@@ -98,6 +98,7 @@ Tajusinkin että komennosta puuttui `sudo` kokonaan.
 Seuraamalla [videon](https://www.youtube.com/watch?v=LMCKbR_wWds) ohjeita sai yhteyden valmiiksi.
 
 ![Näyttökuva 2024-11-13 kello 12 17 28](https://github.com/user-attachments/assets/ffd4ac2e-0b4d-4154-8b36-bf7b00461470)
+Punaisella merkitty kohta joka kertoo että yhteys on toiminnassa.
 
 Luodaan HackTheBoxin sivuilla maalikone ja kokeillaan saadaanko siihen yhteys.
 
@@ -117,7 +118,11 @@ Sitten vastaillaan kysymyksiin mitä tulee HTB sivulla vastaan. Jonka jälkeen o
 
 ![Näyttökuva 2024-11-13 kello 12 39 19](https://github.com/user-attachments/assets/e967391d-36ce-477a-90be-0c2978b5eda0)
 
+Tehdään vielä toinenkin osio, jossa tunkeudutaan FTP palvelimeen ja viedään sieltä tiedosto.
 
+![Näyttökuva 2024-11-13 kello 12 54 22](https://github.com/user-attachments/assets/8625e4e1-5200-4efb-bed2-f92dc27c85b0)
+
+Ja valmista.
 
 
 
@@ -134,7 +139,7 @@ Vaihdetaan oletus tekstieditoriksi micro.
 
 ![Näyttökuva 2024-11-13 kello 11 46 18](https://github.com/user-attachments/assets/d8e66930-46e6-49cb-825e-e2bdcada52bd)
 
-Punaisella merkitty kohta joka kertoo että yhteys on toiminnassa.
+
 
 
 
