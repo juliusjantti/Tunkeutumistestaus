@@ -101,11 +101,24 @@ Luodaan HackTheBoxin sivuilla maalikone ja kokeillaan saadaanko siihen yhteys.
 
 ![Näyttökuva 2024-11-13 kello 12 29 37](https://github.com/user-attachments/assets/21dc33a5-adb5-462f-a33c-5fd1b0bbba84)
 ![Näyttökuva 2024-11-13 kello 12 29 32](https://github.com/user-attachments/assets/a0e1ba74-b9c9-4dfb-8df7-d70c4f39bf6c)
+
 Näyttäisi onnistuvan. 
+
+![Näyttökuva 2024-11-13 kello 12 17 28](https://github.com/user-attachments/assets/ffd4ac2e-0b4d-4154-8b36-bf7b00461470)
+
+
+![Näyttökuva 2024-11-13 kello 12 19 46](https://github.com/user-attachments/assets/137f0459-c563-42bf-a7d9-b4e1957ad715)
+
+Eli nyt on yksi VPN yhteys verkkoon 10.10.16.42/23
 
 Sitten vastaillaan kysymyksiin mitä tulee HTB sivulla vastaan. Jonka jälkeen otetaan Telnet yhteys maalikoneeseen. Muutaman kokeilun jälkeen huomataan että salasana on "root". Ja näin ollaan sisällä. Kopioidaan vielä "root flag" maalikoneesta ja näin on eka osa tehty.
 
 ![Näyttökuva 2024-11-13 kello 12 39 19](https://github.com/user-attachments/assets/e967391d-36ce-477a-90be-0c2978b5eda0)
+
+
+
+
+
 
 
 
@@ -120,13 +133,6 @@ Vaihdetaan oletus tekstieditoriksi micro.
 ![Näyttökuva 2024-11-13 kello 11 46 18](https://github.com/user-attachments/assets/d8e66930-46e6-49cb-825e-e2bdcada52bd)
 
 Punaisella merkitty kohta joka kertoo että yhteys on toiminnassa.
-
-![Näyttökuva 2024-11-13 kello 12 17 28](https://github.com/user-attachments/assets/ffd4ac2e-0b4d-4154-8b36-bf7b00461470)
-
-
-![Näyttökuva 2024-11-13 kello 12 19 46](https://github.com/user-attachments/assets/137f0459-c563-42bf-a7d9-b4e1957ad715)
-
-Eli nyt on yksi VPN yhteys verkkoon 10.10.16.42/23
 
 
 
