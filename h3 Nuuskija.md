@@ -97,6 +97,8 @@ Siirrytään HackTheBoxin käyttöön. Tunnilla loin kyseiselle sivulle jo käyt
 Tajusinkin että komennosta puuttui `sudo` kokonaan. 
 Seuraamalla [videon](https://www.youtube.com/watch?v=LMCKbR_wWds) ohjeita sai yhteyden valmiiksi.
 
+![Näyttökuva 2024-11-13 kello 12 17 28](https://github.com/user-attachments/assets/ffd4ac2e-0b4d-4154-8b36-bf7b00461470)
+
 Luodaan HackTheBoxin sivuilla maalikone ja kokeillaan saadaanko siihen yhteys.
 
 ![Näyttökuva 2024-11-13 kello 12 29 37](https://github.com/user-attachments/assets/21dc33a5-adb5-462f-a33c-5fd1b0bbba84)
@@ -104,7 +106,7 @@ Luodaan HackTheBoxin sivuilla maalikone ja kokeillaan saadaanko siihen yhteys.
 
 Näyttäisi onnistuvan. 
 
-![Näyttökuva 2024-11-13 kello 12 17 28](https://github.com/user-attachments/assets/ffd4ac2e-0b4d-4154-8b36-bf7b00461470)
+
 
 
 ![Näyttökuva 2024-11-13 kello 12 19 46](https://github.com/user-attachments/assets/137f0459-c563-42bf-a7d9-b4e1957ad715)
