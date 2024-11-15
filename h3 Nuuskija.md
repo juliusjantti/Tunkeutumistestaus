@@ -113,6 +113,8 @@ Näyttäisi onnistuvan.
 
 ![Näyttökuva 2024-11-13 kello 12 19 46](https://github.com/user-attachments/assets/137f0459-c563-42bf-a7d9-b4e1957ad715)
 
+tuloste komennolla `ip a`
+
 Eli nyt on yksi VPN yhteys verkkoon 10.10.16.42/23
 
 Sitten vastaillaan kysymyksiin mitä tulee HTB sivulla vastaan. Jonka jälkeen otetaan Telnet yhteys maalikoneeseen. Muutaman kokeilun jälkeen huomataan että salasana on "root". Ja näin ollaan sisällä. Kopioidaan vielä "root flag" maalikoneesta ja näin on eka osa tehty.
