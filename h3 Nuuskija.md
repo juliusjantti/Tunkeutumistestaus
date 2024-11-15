@@ -97,6 +97,7 @@ Siirrytään HackTheBoxin käyttöön. Tunnilla loin kyseiselle sivulle jo käyt
 Tajusinkin että komennosta puuttui `sudo` kokonaan. 
 Seuraamalla [videon](https://www.youtube.com/watch?v=LMCKbR_wWds) ohjeita sai yhteyden valmiiksi.
 
+Käytetään komentoa `sudo openvpn starting_poing_kttmnt.ovpn`
 ![Näyttökuva 2024-11-13 kello 12 17 28](https://github.com/user-attachments/assets/ffd4ac2e-0b4d-4154-8b36-bf7b00461470)
 Punaisella merkitty kohta joka kertoo että yhteys on toiminnassa.
 
