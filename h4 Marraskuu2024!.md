@@ -68,6 +68,11 @@ ja kokeillaan uudestaan.
 ![](https://github.com/user-attachments/assets/1d58b6c5-b649-41ad-859d-ea73d7beb221)
 Ajoin komennon useita kertoja ja useammalla tavalla mutta jostain syystä en saanut mitään tulosta.
 
+Lopuksi kokeilin ajaa suoraan ohjeista kopioidun komennon, ja se näytti toimivan. 
+
+![](https://github.com/user-attachments/assets/5d4765eb-9fc8-454f-aedc-28085498a370)
+
+En ymmärrä mikä on vikana. 
 
 
 
