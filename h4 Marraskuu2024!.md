@@ -74,6 +74,10 @@ Lopuksi kokeilin ajaa suoraan ohjeista kopioidun komennon, ja se näytti toimiva
 
 En ymmärrä mikä on vikana. 
 
+![](https://github.com/user-attachments/assets/3bccee59-6173-4c36-ae0a-1a9f16987567)
+
+Statukseksi ei tule "cracked" vaan "exhausted"
+
 
 
 
