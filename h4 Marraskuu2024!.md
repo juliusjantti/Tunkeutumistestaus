@@ -36,7 +36,46 @@ x)
 - Ohjeet hashcatin asentamiseen ja sen käyttöön. Simppeli työkalu jota voi käyttää tiivisteiden murtamiseen. Ohjeessa ladataan sanakirjatiedosto "Rockyou" joka sisältää miljoonia sanoja. Hashcat kokeilee kaikkien sanojen
   tiivisteitä murrettavaan tiivisteeseen.
 - Ohjeet John-työkalun asentamiseen. Sen avulla voidaan murtaa salasanoja esimerkiksi zip-tiedostoihin. Ohjeissa on valmis zip-tiedosto jonka murtamista harjoitellaan.
-- 
+- Hyökkäyksien estäminen ja korjaaminen on jatkuvaa kissa ja hiiri leikkiä. Salasanat täytyy pitää suojattuna sekä liikkeessä että varastoinnissa. Helpoin tapa murtaa salasana on kokeilla yleisimpiä salasanoja. Julkisten paikkojen Wifi-yhteyksien liikenne on harvoin salattua. Joten liikennetta nuuskimalla voi helposti saada käsiinsä salasanoja. Salasanojen murtaminen on helppoa nykyaikana koska laskentateho on nousussa, käytetään yhä heikkoja salasanoja, paljon sanakirjoja joita voi käyttää hyödyksi.
+
+  a)
+
+   Asennetaan hashcat [Teron](https://terokarvinen.com/2022/cracking-passwords-with-hashcat/) ohjeiden mukaisesti. Sekä ladataan "Rockyou" sanakirjatiedosto.
+
+![](https://github.com/user-attachments/assets/f7767e48-735c-4da7-894a-ecaae8544fde)
+![](https://github.com/user-attachments/assets/52273c38-132b-43ef-8def-b532c671b518)
+
+Otetaan sanakirjan alusta yksi sana testiksi, ja ajetaan sen tiiviste erilliseen tiedostoon. Salasana on tässä testissä "princess".
+![](https://github.com/user-attachments/assets/0283ba8b-8129-43fa-a429-303881f50449)
+
+Koska kyseessä on vain testi, tehdään oma sanakirja jossa on vain muutama sana.
+![](https://github.com/user-attachments/assets/dcad4dee-9f55-46e5-b0c4-63c63ebaa0fa)
+
+Koska tiedetään jo valmiiksi että kyseessä on MD5 tiiviste, ei tiivistettä tarvitse analysoida. Nyt yritetään murtaa se hashcatilla. Ajetaan komento `hashcat -m 0 ekatesti.txt salasanoja.txt -o solved`
+
+![](https://github.com/user-attachments/assets/3d35dfd2-666d-4c5d-8ef8-f3dc316864eb)
+
+Ei näemmä toiminut ajaa tiiviste tiedostosta. Kokeillaan sitten laittaa tiiviste suoraan komentoon.
+![](https://github.com/user-attachments/assets/c30b9a40-f373-4d2d-ab1e-a5871cc8b699)
+Eipä toiminut vieläkään. 
+
+Lisätäänpä hieman lisää muistia koneeseen.
+
+![](https://github.com/user-attachments/assets/d47ab2e0-76a8-4a3d-8788-8bfc1eb4afc6)
+
+ja kokeillaan uudestaan.
+
+![](https://github.com/user-attachments/assets/1d58b6c5-b649-41ad-859d-ea73d7beb221)
+Ajoin komennon useita kertoja ja useammalla tavalla mutta jostain syystä en saanut mitään tulosta.
+
+
+
+
+
+
+
+
+
 
 
 
