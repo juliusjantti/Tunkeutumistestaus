@@ -80,7 +80,7 @@ Statukseksi ei tule "cracked" vaan "exhausted"
 
 Tässä vaiheessa kulutin enemmän aikaa itse kalin kanssa tappelemiseen kuin tehtävien tekemiseen joten ensimmäinen osa jää nyt tähän.
 
-b) 
+c) 
 
 Asennetaan John [Teron](https://terokarvinen.com/2023/crack-file-password-with-john/) ohjeiden mukaisesti. 
 
@@ -116,6 +116,25 @@ Seurataan ohjeita ja lopulta saadaan tiedoston salaus purettua.
 Salasana oli "butterfly", niin kuin pitikin
 
 
+d)
+
+Asennetaan fuff [Teron](https://terokarvinen.com/2023/fuffme-web-fuzzing-target-debian/) ohjeiden mukaisesti.
+
+![](https://github.com/user-attachments/assets/442c2e05-b483-45cc-aa49-23c393e1bbda)
+
+Maalin lataus ja asennus sujui ongelmitta.
+Ladataan vielä sanalistat
+
+Sanalistojen jälkeen kokeillaan fuzzausta komennolla `ffuf -w ~/wordlists/common.txt -u http://localhost/cd/basic/FUZZ`
+![](https://github.com/user-attachments/assets/16240d9a-57ea-4efa-9e7d-10a5a8ecf298)
+
+"Class" ja "developement.log" näyttäisi löytyvän.
+
+Ensimmäisen tehtävän suoritus epäonnistui mutta seuraavassa tuli jo erroria.
+
+![](https://github.com/user-attachments/assets/910400a4-b74e-4f0f-a1c2-5610f31228ff)
+
+Seuraavakaan tehtävä ei toiminut, sama error. En tiedä mikä on vikana. 
 
 
 
