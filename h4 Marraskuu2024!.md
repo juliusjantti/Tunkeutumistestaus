@@ -78,6 +78,47 @@ En ymmärrä mikä on vikana.
 
 Statukseksi ei tule "cracked" vaan "exhausted"
 
+Tässä vaiheessa kulutin enemmän aikaa itse kalin kanssa tappelemiseen kuin tehtävien tekemiseen joten ensimmäinen osa jää nyt tähän.
+
+b) 
+
+Asennetaan John [Teron](https://terokarvinen.com/2023/crack-file-password-with-john/) ohjeiden mukaisesti. 
+
+![](https://github.com/user-attachments/assets/9e2e7b89-44ac-4853-9312-81b06df17e2a)
+
+Komentoja ajaessa tuli kuitenkin ongelma. Zlib-gst-pakettia ei löytynyt.
+
+![](https://github.com/user-attachments/assets/c9b599bc-471f-4529-ae87-26c5b4f01ed1)
+
+Koitin jatkaa ohjeita eteenpäin mutta se ei onnistunut.
+
+`./configure` komentoa ajessa tuli virhe OpenSSLlän kanssa.
+
+![](https://github.com/user-attachments/assets/3eabbe3e-5570-41df-a94d-881002f82e77)
+
+Ohjeena oli ajaa komento `./configure --without-openssl`, joten kokeilin sitä, ja se näytti toimivan. 
+
+![](https://github.com/user-attachments/assets/6335c2ad-ed44-4ca8-bb24-4ff737f0f7cf)
+
+Ajetaan sitten näytölle ilmestynyt komento `make -s clean && make -sj2`. Se näytti toimivan.
+
+Testataan vielä ajamalla pelkkä `john`
+![](https://github.com/user-attachments/assets/9f95d759-33bc-4a7a-ae3f-94814c7c68b9)
+
+Ladataan zip-tiedosto nimeltään tero ja koitetaan purkaa sitä.
+![](https://github.com/user-attachments/assets/476c7767-d66e-4e9b-99df-ce4abdcee768)
+Eipä onnistunut.
+
+Seurataan ohjeita ja lopulta saadaan tiedoston salaus purettua.
+
+![](https://github.com/user-attachments/assets/c60c9ff4-24fa-4649-b225-da2859faae72)
+
+Salasana oli "butterfly", niin kuin pitikin
+
+
+
+
+
 
 
 
