@@ -136,6 +136,15 @@ Ensimmäisen tehtävän suoritus epäonnistui mutta seuraavassa tuli jo erroria.
 
 Seuraavakaan tehtävä ei toiminut, sama error. En tiedä mikä on vikana. 
 
+Pitkän pähkäilyn jälkeen tajusin että koitin fuzzata itse FFuf.me sivua enkä omaa localhostia. Korjasin osoitteen oikeaski ja näin löysin oikeita vastauksia.
+
+![](https://github.com/user-attachments/assets/4fb2fab9-0b58-4305-a953-e601793381d8)
+
+Kohta "File extensions"
+
+![](https://github.com/user-attachments/assets/62f2103d-a99e-45aa-b27d-e97678930748)
+
+
 
 
 
