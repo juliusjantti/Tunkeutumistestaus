@@ -36,7 +36,7 @@ x)
 - Ohjeet hashcatin asentamiseen ja sen käyttöön. Simppeli työkalu jota voi käyttää tiivisteiden murtamiseen. Ohjeessa ladataan sanakirjatiedosto "Rockyou" joka sisältää miljoonia sanoja. Hashcat kokeilee kaikkien sanojen
   tiivisteitä murrettavaan tiivisteeseen.
 - Ohjeet John-työkalun asentamiseen. Sen avulla voidaan murtaa salasanoja esimerkiksi zip-tiedostoihin. Ohjeissa on valmis zip-tiedosto jonka murtamista harjoitellaan.
-- Hyökkäyksien estäminen ja korjaaminen on jatkuvaa kissa ja hiiri leikkiä. Salasanat täytyy pitää suojattuna sekä liikkeessä että varastoinnissa. Helpoin tapa murtaa salasana on kokeilla yleisimpiä salasanoja. Julkisten paikkojen Wifi-yhteyksien liikenne on harvoin salattua. Joten liikennetta nuuskimalla voi helposti saada käsiinsä salasanoja. Salasanojen murtaminen on helppoa nykyaikana koska laskentateho on nousussa, käytetään yhä heikkoja salasanoja, paljon sanakirjoja joita voi käyttää hyödyksi.
+- Hyökkäyksien estäminen ja korjaaminen on jatkuvaa kissa ja hiiri leikkiä. Salasanat täytyy pitää suojattuna sekä liikkeessä että varastoinnissa. Helpoin tapa murtaa salasana on kokeilla yleisimpiä salasanoja. Julkisten paikkojen Wifi-yhteyksien liikenne on harvoin salattua. Joten liikennetta nuuskimalla voi helposti saada käsiinsä salasanoja. Salasanojen murtaminen on helppoa nykyaikana koska laskentateho on nousussa, käytetään yhä heikkoja salasanoja, paljon sanakirjoja joita voi käyttää hyödyksi. John the ripper erinomainen työkalu salasanojen murtamiseen. Hashcat myös hyvä ja nopeampi vaihtoehto salasanojen murtamisenn. Salasanoja täytyy parantaa: käyttää suolausta, parempia tiivisteitä, pidempiä ja monimutkaisia ja uniikkeja salasanoja, kaksisuuntainen vahvistus.
 
   a)
 
@@ -181,6 +181,31 @@ Sitten käytetään Johnia salasanan korkkaamiseen komennolla `john pdf.hash`
 
 ![Näyttökuva 2024-11-18 kello 11 43 37](https://github.com/user-attachments/assets/9fd10e32-c53b-4996-af4e-641eb52e8cf5)
 
+f) 
+
+Kokeillaan murtaa linuxin käyttäjän salasana tiivisteestä.
+Ensin luodaan uusi käyttäjä "Matti" komennolla `sudo useradd Matti`. Ja asetetaan hänelle salasana komennolla `sudo passwd Matti`
+![Näyttökuva 2024-11-18 kello 11 50 11](https://github.com/user-attachments/assets/2bc46eef-b014-43a4-99ee-1cd0800e22f0)
+
+Matin tiiviste löytyi kansiosta /etc/shadow, sekä matin muut tiedot löytyvät osoitteesta /etc/passwd.
+Kopioidaan molemmista tiedostoista Matin tiedot ja lisätään ne omiin tiedostoihin nimeltä "shadow" ja "passwd", jonka jälkeen yhdistetään tiedostot uuteeen "unshadow" tiedostoon..
+
+![Näyttökuva 2024-11-18 kello 12 09 34](https://github.com/user-attachments/assets/40d8eb0f-2d8d-4235-8cc5-c90811c7c7d2)
+
+Samalla luodaan myös oma sanalista "salasanoja.txt" jossa on salasanoja joita John kokeilee.
+
+![Näyttökuva 2024-11-18 kello 12 09 06](https://github.com/user-attachments/assets/4db4d0b0-1da9-4b5b-ac09-1b3aa6e704ca)
+
+Lopuksi ajetaan komento`sudo john --wordlist=/usr/share/wordlists/salasanoja.txt --format=crypt unshadow` joka hoitaa itse murtamisen. Komennossa esitetään missä sanaista tiedosto sijaitsee sekä mikä tiedosto on murron kohteena (tässä kohtaa tiedosto unshadow).
+
+![Näyttökuva 2024-11-18 kello 12 12 29](https://github.com/user-attachments/assets/04b73044-54f8-4a78-a500-72c379138c54)
+
+Ja kappas se toimi. Matin salasana on murrettu.
+
+[Kyseinen](https://www.youtube.com/watch?v=5MLprTAxYDA&t=10s) video toimi apuna tähän tehtävään.
+
+
+
 
 
 
@@ -195,4 +220,5 @@ Sitten käytetään Johnia salasanan korkkaamiseen komennolla `john pdf.hash`
 - Tero Karvinen 2024, Tunkeutumistestaus kurssi: https://terokarvinen.com/tunkeutumistestaus/
 - Tero Karvinen, Fuffme - Install Web Fuzzing Target on Debian: https://terokarvinen.com/2023/fuffme-web-fuzzing-target-debian/
 - ffuf.me, Target practice: http://ffuf.me/
-- 
+- CybrZone, Crack password protecte PDF documents with John The Ripper: https://www.youtube.com/watch?v=-AnQ2GAbFUY
+- G MAN: Security, CRACK the Password | JOHN the Ripper Password Cracking (5 Minutes) | Basic Tutorial: https://www.youtube.com/watch?v=5MLprTAxYDA&t=10s
