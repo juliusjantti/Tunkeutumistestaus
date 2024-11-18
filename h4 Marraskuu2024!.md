@@ -239,6 +239,9 @@ Sitten puuttuu vain tiedoston avaaminen. Annetaan tiedostolle oikeat oikeudet, j
 Ja niin saatiin reverse shell yhteys metasploitableen.
 ![Näyttökuva 2024-11-18 kello 14 15 16](https://github.com/user-attachments/assets/2e0a6502-d3ca-4705-abd6-1297feeb55dd)
 
+Bonuksena vielä logi siitä miten metasploitablella ladattiin tiedosto?
+
+![Näyttökuva 2024-11-18 kello 14 22 50](https://github.com/user-attachments/assets/aa1ec1f6-3e60-476e-9282-00fb5b1f3e07)
 
 
 
