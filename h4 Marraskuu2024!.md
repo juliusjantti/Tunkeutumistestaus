@@ -142,14 +142,44 @@ Pitkän pähkäilyn jälkeen tajusin että koitin fuzzata itse FFuf.me sivua enk
 
 Kohta "File extensions"
 
-![](https://github.com/user-attachments/assets/62f2103d-a99e-45aa-b27d-e97678930748)
+![Näyttökuva 2024-11-18 kello 10 52 49](https://github.com/user-attachments/assets/70e6145e-90e1-48c7-8e2d-4ab1733e8b95)
 
+Kohta " No 404 status"
+![Näyttökuva 2024-11-18 kello 10 54 33](https://github.com/user-attachments/assets/ec92c9d2-5fab-4268-b3c6-b6867d5e177a)
 
+Loput kohdat "Param Mining", "Rate Limited" ja "Subdomains".
 
+![Näyttökuva 2024-11-18 kello 10 56 18](https://github.com/user-attachments/assets/af34c637-bc98-4f2e-8849-6530547ac169)
+![Näyttökuva 2024-11-18 kello 11 00 40](https://github.com/user-attachments/assets/8d4f2211-a7a1-4abd-8906-35b30c4575c5)
+![Näyttökuva 2024-11-18 kello 11 02 25](https://github.com/user-attachments/assets/0696aba0-6d9f-48f3-af9a-3c21a8ab6c01)
 
+e) 
 
+Luodaan salasanalla suojattu PDF tiedosto.
 
+[Tästä](https://www.youtube.com/watch?v=-AnQ2GAbFUY) videosta löytyi ohjeet PDF tiedoston salaamiseen ja salauksen murtamseen.
 
+Asennetaan ensin "pdftk" komennolla `sudo apt-get install pdftk`
+
+Sitten luodaan tiedosto komennolla `pdftk tiedosto.pdf output pwd.pdf user_pw salasana`
+
+![Näyttökuva 2024-11-18 kello 11 26 11](https://github.com/user-attachments/assets/b22439e2-d515-420c-8ec0-bd1740aa6bfa)
+
+Ja huomataan miten se ei toimi.
+
+Kokeillaan ladata netistä valmis .pdf tiedosto ja asetetaan sille salasana. 
+
+![Näyttökuva 2024-11-18 kello 11 40 29](https://github.com/user-attachments/assets/1b649d7c-9b60-4f29-b778-07b23b595353)
+
+Se näyttäisi toimivan.
+
+Sitten otetaan salasanan tiiviste erilliseen pdf.hash tiedostoon. 
+
+![Näyttökuva 2024-11-18 kello 11 41 36](https://github.com/user-attachments/assets/db6baf43-8e93-4e6e-acea-ba90b61863df)
+
+Sitten käytetään Johnia salasanan korkkaamiseen komennolla `john pdf.hash`
+
+![Näyttökuva 2024-11-18 kello 11 43 37](https://github.com/user-attachments/assets/9fd10e32-c53b-4996-af4e-641eb52e8cf5)
 
 
 
@@ -163,4 +193,6 @@ Kohta "File extensions"
 - Tero Karvinen 2022, Cracking Passwords with Hashcat: https://terokarvinen.com/2022/cracking-passwords-with-hashcat/
 - Tero Karvinen 2023, Crack File Password With John: https://terokarvinen.com/2023/crack-file-password-with-john/
 - Tero Karvinen 2024, Tunkeutumistestaus kurssi: https://terokarvinen.com/tunkeutumistestaus/
+- Tero Karvinen, Fuffme - Install Web Fuzzing Target on Debian: https://terokarvinen.com/2023/fuffme-web-fuzzing-target-debian/
+- ffuf.me, Target practice: http://ffuf.me/
 - 
