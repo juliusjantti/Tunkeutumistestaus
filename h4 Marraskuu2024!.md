@@ -81,6 +81,12 @@ Statukseksi ei tule "cracked" vaan "exhausted"
 
 Tässä vaiheessa kulutin enemmän aikaa itse kalin kanssa tappelemiseen kuin tehtävien tekemiseen joten ensimmäinen osa jää nyt tähän.
 
+
+
+## Lisäys 22.11.24 
+
+Ongelmana oli se että generoidessa "princess" salasanaa otin mukaan myös rivivaihdon. Joten salasanaksi ei tullun "princess" vaan "princess(rivinvaihto)". Tämän takia en salasanaa saanut murrettua.
+
 c) 
 
 Asennetaan John [Teron](https://terokarvinen.com/2023/crack-file-password-with-john/) ohjeiden mukaisesti. 
