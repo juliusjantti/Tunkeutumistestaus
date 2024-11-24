@@ -36,7 +36,7 @@ Laitetaan ZAPista importattu sertifikaatti firefoxiin. Mennään > settings > pr
 ![](https://github.com/user-attachments/assets/514e1625-faad-4ec4-aec3-c2e1e80e98ce)
 ![](https://github.com/user-attachments/assets/38d10e82-ac56-4a23-b138-4a3d42759caa)
 
-Sitten yhdistetään ZAP ja foxyproxy
+Sitten yhdistetään ZAP ja foxyproxy. Localhost ip osoitteeseen sekä portti 8080.
 ![](https://github.com/user-attachments/assets/8c663471-fcb7-41ce-9d9f-d525f7784a8e)
 
 ![](https://github.com/user-attachments/assets/3885d1df-9c8f-42d9-b152-fd13157e9ac0)
