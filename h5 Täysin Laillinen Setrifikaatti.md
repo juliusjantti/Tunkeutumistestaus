@@ -1,6 +1,6 @@
 # Tehtävät
 
-Tehtävät löytyvät [täältä](https://terokarvinen.com/tunkeutumistestaus/) kohdasta h4.
+Tehtävät löytyvät [täältä](https://terokarvinen.com/tunkeutumistestaus/) kohdasta h5.
 
 # Vastaukset
 
@@ -42,7 +42,43 @@ Sitten yhdistetään ZAP ja foxyproxy. Localhost ip osoitteeseen sekä portti 80
 ![](https://github.com/user-attachments/assets/3885d1df-9c8f-42d9-b152-fd13157e9ac0)
 Näin pyynnöt näkyvät myös ZAPissa.
 
+Sitten yritettiin muokata FoxyProxin patterns toimintoa siten että vain tietyn sivun liikennettä napataan. Whitelistattiin portswiggerin nettisivut.
 
+![](https://github.com/user-attachments/assets/8fbd84bb-c8a8-46c6-b6d6-b815e0d01326)
+
+Ja sitten kokeiltiin mennä is.fi, ja katsottiin näkyikö ZAPissa liikennettä. 
+![](https://github.com/user-attachments/assets/2d4dd873-c462-49e2-a2b6-5374759af346)
+Eipä näyttänyt onnistuvan. Foxyproxy jota käytän näyttää hieman erilaiselta kuin tunnilla käytetty versio. Joten en ollut täysin varma mistä tämä patterns otettiin käyttöön. En lopulta saanut toimimaan patternsia siten että se kaappaisi liikenteen vain tietyiltä sivuilta.
+
+c) 
+
+Yritetään suorittaa ensimmäinen labi "Lab: Insecure direct object references"
+
+Zapin käytössä on hieman ongelmia mutta koitetaan silti ratkaista labi. Ohjeissa sanottiin että kun labissa menee chattaamaan, voi ladata chatin transcriptin. Zapin avulla voi muokata urlia hakemaan juuri tietyn transcriptin. Ja juuri "1.txt" transcriptia hakemalla saa selvitetyksi salasanan. 
+
+Joten muokataan GET pyyntöä ja laitetaan siihen 1.txt. Oikealla alhaalla kuvassa näkyy salasana.
+
+![](https://github.com/user-attachments/assets/583f8141-c2a3-4a0c-b0df-7be6c99f34ec)
+
+Käytetään kyseistä salasanaa ja kirjaudutaan sisään käyttäjänä "Carlos"
+
+![](https://github.com/user-attachments/assets/3432afde-9456-40c8-a323-3cd4dcb490df)
+
+Ja labi saatiin ratkaistua.
+
+d)
+
+Kun avataan labi ja mennään labissa tietyn kuvan kohdalle, huomataan ZAPissa että kuvaa haetaan.
+
+![](https://github.com/user-attachments/assets/fe49e048-4052-40d9-a1c7-c87d48ce28d5)
+
+Tiedetään että pyyntöä joka hakee kuvan, voidaan muokata joten muokataan pyyntöä hakemaan meille /etc/passwd tiedoston sisällön. 
+
+![](https://github.com/user-attachments/assets/435b5a72-4aac-4524-a939-ce7046303e53)
+
+Tämä ei kuitenkaan toiminut, sillä vastauksena ei tullut mitään. 
+
+![](https://github.com/user-attachments/assets/341f6712-a2f7-410c-a361-968e7bab07da)
 
 
 
@@ -63,4 +99,4 @@ Näin pyynnöt näkyvät myös ZAPissa.
 - Owasp 10:2021, Broken Access Control: https://owasp.org/Top10/A01_2021-Broken_Access_Control/
 - Owasp 10:2021, Server Side Request Forgery: https://owasp.org/Top10/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/
 - Zaproxy, Download Zap: https://www.zaproxy.org/download/
-- 
+- FoxyProxy, Url Patterns: https://help.getfoxyproxy.org/index.php/knowledge-base/url-patterns/
