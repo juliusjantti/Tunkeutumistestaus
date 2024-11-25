@@ -105,9 +105,29 @@ Kokeillaan käyttää suoraa sijaintia, eikä polkua. Ja kappas sehän toimi het
 
 ![](https://github.com/user-attachments/assets/72e86730-22f8-4e69-bf36-bdf107cd4dd8)
 
+![](https://github.com/user-attachments/assets/f1c88b25-1c56-4fe3-b28a-ca0d8c9a6920)
+Labi suoritettu.
 
 
-d)
+f)
+
+Kolmannessa path traversal labissa sovellus poistaa pyynnöstä kaikki komennot joilla voitaisiin liikkua hakemistossa. 
+
+Kokeillaan labissa ensin [portswiggerin](https://portswigger.net/web-security/file-path-traversal) sivuilta löytyvää koodausta `%2e%2e%2f` ja `%252e%252e%252f`
+
+![](https://github.com/user-attachments/assets/d3ad51a3-6898-40ef-86de-b1a4071486c5)
+![](https://github.com/user-attachments/assets/1364a6b9-91de-459b-a85b-fc0e3dbc8304)
+
+Kumpikaan ei toiminut.
+
+Tässä vaiheessa en ihan tiennyt mitä tehdä joten katsoin vinkkejä. Labin "solutions" kohdasta löytyikin suora vastaus. Pyyntöön piti lisätä `....//....//....//etc/passwd`. Ja näin saatiin taas salasanat. Olin näemmä katsonut väärää kohtaa ja hypännyt jo liian pitkälle. Eli tämä ratkaisu taisi liittyä jotenkin termiin "nested travel sequences". En ihan täysin ymmärtänyt ideaa. 
+
+![](https://github.com/user-attachments/assets/d0765aac-4b24-4431-8bef-378cdcb449d4)
+![](https://github.com/user-attachments/assets/2403ffb2-50a0-433f-946c-43b1c76ce585)
+
+Labi suoritettu.
+
+g)
 
 
 
