@@ -127,12 +127,58 @@ Tässä vaiheessa en ihan tiennyt mitä tehdä joten katsoin vinkkejä. Labin "s
 
 Labi suoritettu.
 
-g)
+g) jätetään viimeiseksi
+
+h)
+
+Ohjeena oli käyttää varaston saldon määrän tarkistusta apuna ja poistaa käyttäjä "Carlos".
+
+Kun tarkastaa saldon, huomaa että tämän tuotteen kohdalla vastaukseksi tulee 256.
+
+![](https://github.com/user-attachments/assets/ef9379f7-423b-47d3-8db3-e55787046218)
+
+Kun vaihtaa "stockApi" URLlän tilalle "http://localhost/admin", aukeaa hieman html koodia.
+
+![](https://github.com/user-attachments/assets/a5fb9407-124b-4e3b-9fde-7c4a36059111)
+
+Kun scrollailee html tekstiä alaspäin löytyy kohta jossa voi poistaa käyttäjän. Kopioidaan kyseinen kohta samaan URLlään johon laitettiin myös aikaisempi localhost URL, ja lähetetään pyyntö uudestaan.
+ 
+![](https://github.com/user-attachments/assets/836fe364-286f-4ade-9674-bcc3568434c5)
+
+Ja näin käyttäjä on poistettu ja lab on valmis.
+
+![](https://github.com/user-attachments/assets/de7a622c-99b2-4310-9e52-2366e522bef6)
+
+i)
+
+Kokeillaan ensin hakusanan lähettämistä ja katotaan mitä zapissa löytyy.
+
+![](https://github.com/user-attachments/assets/6eed151a-eb9a-4f60-93f1-847c32b226d7)
+
+Ei löytynyt mitään kovin järkevää. Ohjeissa pyydettiin käynnistämään "alert" funktio mutta en ollut ihan varma miten se tehdään. Katsotaan siis vastaus.
+
+Tässä labissa ei olisi tarvinnut zappia ollenkaan. Riitti kuin laittoi labin hakukenttään `<script>alert(1)</script>`. Eli tässä vissiin hakusanaksi voidaan laittaa jonkinlainen skripti, ja applikaatio ajaa kyseisen skriptin?
 
 
+Labi suoritettu.
 
+![](https://github.com/user-attachments/assets/9fe41f54-7883-4f53-82ac-a9ac91ab99fb)
 
+j) 
 
+Ohjeena oli suorittaa "alert" funktio kommentoimalla. Joten ajetaan edellisen tehtävän komento kommentissa.
+
+![](https://github.com/user-attachments/assets/10054959-c69c-4b55-9446-afe711dfc1b5)
+
+Näin labi oli taas suoritettu.
+
+![](https://github.com/user-attachments/assets/c74cf60c-9b34-46bd-8964-130e822406fd)
+
+Zapissa näkyi seuraavasti:
+
+![](https://github.com/user-attachments/assets/5f89de40-40ad-45b3-80ac-b55e7291dbcf)
+
+Analysointi jäi nyt hieman vähemmälle, sillä en aina täysin tajunnut tarkalleen mitä olin tekemässä.
 
 
 
@@ -152,3 +198,5 @@ g)
 - Owasp 10:2021, Server Side Request Forgery: https://owasp.org/Top10/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/
 - Zaproxy, Download Zap: https://www.zaproxy.org/download/
 - FoxyProxy, Url Patterns: https://help.getfoxyproxy.org/index.php/knowledge-base/url-patterns/
+- Renne Jämsen, h5 Täysin Laillinen Sertifikaatti: https://github.com/RenneJ/tunkeutumistestaus/blob/main/h5-t%C3%A4ysin-laillinen-sertifikaatti.md
+- 
