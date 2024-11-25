@@ -80,6 +80,38 @@ Tämä ei kuitenkaan toiminut, sillä vastauksena ei tullut mitään.
 
 ![](https://github.com/user-attachments/assets/341f6712-a2f7-410c-a361-968e7bab07da)
 
+Tässä vaiheessa en tiennyt mitä tehdä joten päätin katsella muiden raportteja. 
+[Rennen](https://github.com/RenneJ/tunkeutumistestaus/blob/main/h5-t%C3%A4ysin-laillinen-sertifikaatti.md) raportista löysinkin apua.
+
+![](https://github.com/user-attachments/assets/d1176ea9-5fbc-484a-bc67-8462807ed0a4)
+
+Kun voihtoi "Body" kohdasta "imagen" tilalle "text", salasanat tulivat näkyviin. Joten labi ratkaistu.
+
+![](https://github.com/user-attachments/assets/2d9ad3a5-49fe-4fe4-b6ef-365cf42f6777)
+
+e)
+
+Sitten seuraavassa labissa pitäisi saada sama /etc/passwd tiedosto, mutta se ei olekkaan enää samalla polulla.
+
+![](https://github.com/user-attachments/assets/51fde631-858c-4424-bba5-e8403d90fe36)
+
+
+![](https://github.com/user-attachments/assets/e7fd257e-0257-45e0-82e7-9d6c732b90e2)
+
+Kokeillaan samaa testiä kuin aikasemmassa kohtaa, mutta huomataan että tiedostoa ei löydy.
+
+[Portswiggerin](https://portswigger.net/web-security/file-path-traversal) path traversal ojeissa kerrotaan että joskus voidaan käyttää absoluuttista polkua juureen.
+Kokeillaan käyttää suoraa sijaintia, eikä polkua. Ja kappas sehän toimi heti.
+
+![](https://github.com/user-attachments/assets/72e86730-22f8-4e69-bf36-bdf107cd4dd8)
+
+
+
+d)
+
+
+
+
 
 
 
