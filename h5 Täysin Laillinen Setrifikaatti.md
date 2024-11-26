@@ -127,7 +127,31 @@ Tässä vaiheessa en ihan tiennyt mitä tehdä joten katsoin vinkkejä. Labin "s
 
 Labi suoritettu.
 
-g) jätetään viimeiseksi
+g) Labissa suoritetaan Server Side Template Injection. Eli yritetään syöttää haitallista koodia webbisivun mallipohjaan. 
+Kirjaudutaan ensin ohjeiden mukaisesti sisään labissa.
+![](https://github.com/user-attachments/assets/c7c553d4-1dc7-4a08-a8ee-26536fdc5fe9)
+
+Loput ohjeet ovat aika laihat. Täytyy löytää ja varastaa salainen avain.
+
+En tässä kohtaa tiennyt juuri yhtään mitä pitäisi yrittää joten turvaudutaan vinkkeihin.
+
+Kun avaa labista jonkun tuotteen, huomaa että sen mallipohjaa voi muokata.
+
+![](https://github.com/user-attachments/assets/05a863a2-2310-45af-9215-64daa940b4e6)
+
+Kun muokkaa mallipohjaa siten että tekstin tilalle laittaa merkkijonon `${{<%[%'"}}%\` ja painaa "save". Tulee vastaan seuraavanlainen errori.
+
+![](https://github.com/user-attachments/assets/544d7298-fcb0-48f3-a3a4-de78b3082c82)
+
+Kun muokkaa mallipohjaa uudestaan ja kirjoittaa siihen `{{settings.SECRET_KEY}}`, antaa serveri takaisin salaisen avaimen.
+
+![](https://github.com/user-attachments/assets/96e1d397-9cf8-4596-b75d-82b873b18344)
+
+Ja labi on ratkaistu.
+
+![](https://github.com/user-attachments/assets/9fe1e7e3-fa56-424b-8be1-337862998943)
+
+Tämä labi oli itselle senverran hankala että en olisi päässyt yhtään eteenpäin yksinään. Joten tässä tuli vain seurattua vastauksia.
 
 h)
 
