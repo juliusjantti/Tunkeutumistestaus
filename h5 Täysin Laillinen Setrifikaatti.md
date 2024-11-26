@@ -181,6 +181,52 @@ Zapissa näkyi seuraavasti:
 Analysointi jäi nyt hieman vähemmälle, sillä en aina täysin tajunnut tarkalleen mitä olin tekemässä.
 
 
+k)
+
+Ladataan [Pencode](https://github.com/ffuf/pencode). Kyseisellä sivulla ohjeistettiin asentamaan pencode GO:lla.
+
+![](https://github.com/user-attachments/assets/0c7c66b8-4e58-4818-8bd7-4b1e42003562)
+
+Itselläni sitä ei ole, joten asensin sen komennolla `sudo apt install gccgo-go`
+
+![](https://github.com/user-attachments/assets/a81b956a-0010-4441-b663-40e5e6c799d2)
+
+Pencoden github sivulla luki että pencoden voi asentaa komennolla `go install github.com/ffuf/pencode/cmd/pencode@latest`, joten ajetaan komento.
+
+![](https://github.com/user-attachments/assets/e8283b5a-191e-4e09-a165-3427cbaf6d93)
+
+Pencoden github sivulla oli seuraava ohje encodaamiseen, joten kokeillaan sitä.
+
+![](https://github.com/user-attachments/assets/f8450b4f-9dc7-41c3-b5ea-82f0d478b28b)
+
+Ajetaan komento `echo 'jeejee'|pencode hexencode`.
+
+![](https://github.com/user-attachments/assets/a326f9f3-5384-40d8-96be-7b5c02915cac)
+
+Eipä näyttänyt toimivan. Kokeillaanpa sitten ajaa ehdotettu komento `sudo apt install golang-github-fuff-pencode-dev`
+
+![](https://github.com/user-attachments/assets/92f4cd6e-8055-4115-8eb3-d03cc1164a7c)
+
+Ei napannut.
+
+![](https://github.com/user-attachments/assets/7f9a9bbc-462e-4d62-ad16-4429cb3855d9)
+
+Pencode ei näytä olevan sittenkään asentunut. Joten kokeillaan asennusta uudestaan. 
+
+![](https://github.com/user-attachments/assets/ad2b555d-da1c-4ebe-936f-0fd839770309)
+
+No nyt näyttäisi toimivan. KOkeillaas ajaa `echo 'jeejee'|pencode hexencode` uudestaan.
+
+![](https://github.com/user-attachments/assets/d5813a0e-4391-47a7-98e9-b4570c1187ab)
+
+Noniin nyt toimii! Encoodaus suoritettu. 
+
+
+
+
+
+
+
 
 
  
@@ -199,4 +245,5 @@ Analysointi jäi nyt hieman vähemmälle, sillä en aina täysin tajunnut tarkal
 - Zaproxy, Download Zap: https://www.zaproxy.org/download/
 - FoxyProxy, Url Patterns: https://help.getfoxyproxy.org/index.php/knowledge-base/url-patterns/
 - Renne Jämsen, h5 Täysin Laillinen Sertifikaatti: https://github.com/RenneJ/tunkeutumistestaus/blob/main/h5-t%C3%A4ysin-laillinen-sertifikaatti.md
+- ffuf, pencode: https://github.com/ffuf/pencode
 - 
