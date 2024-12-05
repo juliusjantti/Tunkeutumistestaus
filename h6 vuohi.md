@@ -31,6 +31,11 @@ f) Editmenu. Lisää uusi oma komento micro:n palettero-lisäkkeellä käytettä
 # Vastaukset
 
 
+x) 
+
+Artikkelissa ohjeet WebGoatin asentamiseen ja sen ajamisee. WebGoat laitetaan pyörimään porttiin 8888, jotta sen tehtäviä voidaan ratkaista selaimessa localhost osoitteessa.
+
+
 a) 
 
 Asennetaan webgoat 2023.4, seuraamalla [Teron](https://terokarvinen.com/2023/webgoat-2023-4-ethical-web-hacking/) ohjeita.
@@ -101,6 +106,116 @@ Toisessa kohdassa tietoja piti muuttaa. Mutta en tiennyt miten se tehdään. Kok
 ![](https://github.com/user-attachments/assets/b0970324-5136-457b-95ba-739c75025d28)
 
 IDOR on kuitenkin ratkaistu.
+
+## Pieni probleema
+
+Tässä vaiheessa tuli tehtävien tekemiseen tauko, joten sammutin WebGoatin. Ja seuraavan kerran kun taas jatkoin tehtäviä, ei WebGoat suostunutkaan aukemaan enään.
+
+Sisäänkirjautumissivu aukesi normaalisti, mutta kun yritti kirjautua sisään näkyi komentorivissä seuraava errori
+![](https://github.com/user-attachments/assets/dfc24ebf-4a1c-4bd5-a609-d6a2c4a73f1f)
+
+Eikä selaimessa näkynyt mitään.
+![](https://github.com/user-attachments/assets/b31006dd-41f8-438e-8c59-058fe20525ac)
+
+Mainittakoon vielä että "admin" käyttäjän salasana näkyi syötteessä, webgoatin käynnistyessä mutta salasana ei kuitenkaan toiminut. 
+
+Kokeilin luoda uuden käyttäjän ja kirjautua sillä sisään mutta sekään ei toiminut.
+![](https://github.com/user-attachments/assets/8abe4ab1-5ff8-4aef-ab8c-b4dfb4ce0415)
+
+Urli hieman muuttui mutta edelleen näyttää tyhjää. Urlissa näytti olevan kahteen kertaan osoite "127.0.0.1:8888/WebGoat", joten kumitin sen pois. 
+
+![](https://github.com/user-attachments/assets/02709d68-3f8e-4375-a411-56a35da578b8)
+
+WebGoat tuntui nyt aukeavan.
+![](https://github.com/user-attachments/assets/03cd8519-28c9-44bc-83a2-ea4ed1735287)
+
+Mutta syötteessä on kuitenkin kyseinen Errori. Kokeillaan jatkaa tehtäviä
+
+## Jatketaan tehtäviä
+
+
+
+- Missing Function Level Access Control
+
+ Tehtävässä piti löytää kaksi piilotettua esinettä. 
+
+  ![](https://github.com/user-attachments/assets/e3aac2dc-b869-430c-8310-8dc4066f0dce)
+
+  Kokeillaan ensin painella kyseisiä nappeja ja katsotaan mitä ZAP nappaa.
+
+  Löytyi ainakin seuraavanlainen kohta mutta siitä ei löytynyt mitään järkevää.
+
+  ![](https://github.com/user-attachments/assets/e68a78a7-6155-4f17-8eaa-26715285dd41)
+
+  TÄssä vaiheessa piti etsiä hieman vinkkejä, ja niitä löytyi [tästä](https://www.youtube.com/watch?v=C-MTbhfXbgg) videosta.
+
+  ![](https://github.com/user-attachments/assets/639f4395-5491-42e2-80ee-33cc0feaffd0)
+
+  Tehtävään löytyy vastaukset kun tarkistaa sivun elementit. Sieltä löytyy kohta "Hidden menu"
+
+![](https://github.com/user-attachments/assets/fdffff7a-0d49-4c6e-9d54-c658c0338eb3)
+
+
+Seuraavaksi koitetaan saada käyttäjän Jerry tiiviste. 
+
+![](https://github.com/user-attachments/assets/6cc016b3-3d5b-4c87-9864-9601f9ec6899)
+Submit-nappia painaessa ottaa ZAP kiinni seuraavanlaista tietoa.
+
+![](https://github.com/user-attachments/assets/d1929400-b346-462e-91bd-4728a40e45b6)
+
+Kyseistä puuntöä pitää hieman muokata. Ensiksi muuttaa "Content-type" JSONiksi, sekä muuttaa POST pyyntö GET pyyntöön. Lisäksi laittaa jotain tekstiä "userHash" kohtaan jotta se ei ole tyhjä. Ja näin saatiin tiivisteet haettua.
+
+![](https://github.com/user-attachments/assets/ac710a9d-c9fe-449b-98ac-b00f388d7f83)
+
+Tähänkin tehtävään oli aiemassa videosta apua. 
+
+![](https://github.com/user-attachments/assets/3088a84f-208a-4cec-b5de-0e17ffbb8dca)
+Kohta suoritettu.
+
+
+c) 
+
+- Authentication bypasses
+  
+  Tehtävässä pitää päästä turvakysymyksistä läpi.
+  
+![](https://github.com/user-attachments/assets/a4033724-b3df-4025-abdf-4b8ea01641d2)
+
+Kokeillaan taas ensiksi mitä ZAP nappaa.
+
+![](https://github.com/user-attachments/assets/72e9bad2-a925-416c-972a-07156fb37f56)
+
+Ei näy mitään kovin kummallista. Venkslataan kuitenkin kyseisiä parametreja.
+
+
+![](https://github.com/user-attachments/assets/249e6dc4-1a00-4de7-8ba3-a97e101a5f36)
+
+Tehtävässä riitti että vaihtoi secQuestion1 ja 2 parametreihin secQuestion A ja B.
+
+![](https://github.com/user-attachments/assets/cb1f529b-4d98-4267-8b74-c8b89e20fd9b)
+
+- Insecure Login
+
+  Tässä kohdassa ei tarvinnut muuta kuin ottaa ZAPilla paketti kiinni ja noukkia sieltä tarvittavat käyttäjätiedot "CaptainJack" ja "BlackPearl".
+  ![](https://github.com/user-attachments/assets/df5b1131-1685-4fee-aeeb-c085d83e14a1)
+
+  ![](https://github.com/user-attachments/assets/2b592326-a3e0-4c78-8f2c-757ab32f2ea7)
+
+
+
+Tässä vaiheessa alkoi aika loppumaan joten kaikkiin tehtäviin en ehtinyt. Lisäksi nopealla vilkaisulla ne olivat senverran monimutkaisia että omat taidot eivät välttämättä niihin riitä, sekä tehtävien tekeminen älyttömän hitaalla virtuaalikoneella aiheuttaa jo harmaita hiuksia.
+
+d)
+
+- Server SIde Request Forgery
+
+
+
+e) 
+
+- Client side filtering
+
+  
 
 
   
