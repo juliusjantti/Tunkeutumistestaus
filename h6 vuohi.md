@@ -203,17 +203,35 @@ Tehtävässä riitti että vaihtoi secQuestion1 ja 2 parametreihin secQuestion A
 
 
 
-Tässä vaiheessa alkoi aika loppumaan joten kaikkiin tehtäviin en ehtinyt. Lisäksi nopealla vilkaisulla ne olivat senverran monimutkaisia että omat taidot eivät välttämättä niihin riitä, sekä tehtävien tekeminen älyttömän hitaalla virtuaalikoneella aiheuttaa jo harmaita hiuksia.
+
 
 d)
 
-- Server SIde Request Forgery
+- Server Side Request Forgery
+  
+![](https://github.com/user-attachments/assets/e0b64a19-4c4a-4647-bedb-528d100177eb)
+Toimitaan ohjeiden mukaisesti ja muokataan lähetettyä pyyntoä "tom.png" "jerry.png"ksi. 
+
+![](https://github.com/user-attachments/assets/f849a182-60ec-49b6-8feb-669092e8dadc)
+Toisessa kohdassa toimitaan jokseenkin samalla tavalla. Vaihdetaan vain URL kissakuvasta, pyydettyyn "http://ifconfig.pro" urliin.
+
+![](https://github.com/user-attachments/assets/8fba8195-bb22-4dda-9c2d-28a48b5e4309)
+
+![](https://github.com/user-attachments/assets/ebde9c6e-52d0-4f16-8cb4-b6a8b4ff873a)
+
+Nämä kaksi kohtaa olivat hieman helpompia.
+
+
+
+
 
 
 
 e) 
 
 - Client side filtering
+
+  Tässä vaiheessa alkoi aika loppumaan joten kaikkiin tehtäviin en ehtinyt. Lisäksi nopealla vilkaisulla ne olivat senverran monimutkaisia että omat taidot eivät välttämättä niihin riitä, sekä tehtävien tekeminen älyttömän hitaalla virtuaalikoneella aiheuttaa jo harmaita hiuksia.
 
   
 
