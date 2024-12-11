@@ -35,5 +35,5 @@ Artikkeli oli yli 4 sivua pitkä joten havainnot on tehty sekä silmäillen ett�
 
 - Tero Karvinen, Tunkeutumistestaus kurssi: https://terokarvinen.com/tunkeutumistestaus/
 - IEEE, A Study on Metasploit Framework: A Pen-Testing Tool: https://ieeexplore.ieee.org/abstract/document/9200028
-- Google Scholar, scholar.google.com
+- Google Scholar: https://scholar.google.com/
 - Julkaisufoorumi, JUFO-portaali: https://jfp.csc.fi/jufoportaali
